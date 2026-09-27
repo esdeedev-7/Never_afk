@@ -96,7 +96,7 @@ function sizeCanvas() {
   canvas.height = H * devicePixelRatio;
   ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
 }
-// size once — we don't re-size mid-animation so accumulated particles never get wiped
+  
 sizeCanvas();
 
 function heart(a, scale) {
@@ -107,7 +107,6 @@ function heart(a, scale) {
 
 const MAX_SCALE = 15.5;
 
-// spend the full 30 real seconds building, regardless of the device's frame rate
 const DURATION_MS = 30000;
 const TOTAL_PARTICLES = 90000;
 const PHASE1_PARTICLES = Math.floor(TOTAL_PARTICLES * 0.6);
