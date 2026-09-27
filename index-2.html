@@ -96,7 +96,7 @@ function sizeCanvas() {
   canvas.height = H * devicePixelRatio;
   ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
 }
-// size once — we don't re-size mid-animation so accumulated particles never get wiped
+
 sizeCanvas();
 
 function heart(a, scale) {
@@ -107,13 +107,13 @@ function heart(a, scale) {
 
 const MAX_SCALE = 15.5;
 
-// ~30 seconds at 60fps, spread across a fill phase and a bright rim phase
+
 const PHASE1_FRAMES = 1050;
 const PHASE2_FRAMES = 700;
-const PHASE1_BATCH = 55;   // particles drawn per frame while filling
-const PHASE2_BATCH = 46;   // particles drawn per frame while building the glowing rim
-const PHASE1_TOTAL = PHASE1_FRAMES * PHASE1_BATCH; // ~57,750 particles
-const PHASE2_TOTAL = PHASE2_FRAMES * PHASE2_BATCH; // ~32,200 particles
+const PHASE1_BATCH = 55;     
+const PHASE2_BATCH = 46;          
+const PHASE1_TOTAL = PHASE1_FRAMES * PHASE1_BATCH;  
+const PHASE2_TOTAL = PHASE2_FRAMES * PHASE2_BATCH; 
 const TOTAL_FRAMES = PHASE1_FRAMES + PHASE2_FRAMES;
 
 let frame = 0;
